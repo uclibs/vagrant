@@ -1,6 +1,6 @@
 ## Introduction
 
-A test/play virtual machine for [Open Journal Systems](http://pkp.sfu.ca/ojs/). It should work on any operating system that supports VirtualBox and Vagrant.
+A test/play virtual machine for [Open Monograph Press](http://pkp.sfu.ca/omp/). It should work on any operating system that supports VirtualBox and Vagrant.
 
 This virtual machine **should not** be used in production.
 
@@ -13,15 +13,15 @@ Install the following prerequisites on your laptop or desktop:
 
 ## Setting up your virtual machine
 
-1. `git clone https://github.com/pkp/ojs-vagrant.git` (or download the .zip/.tar version)
-2. `cd ojs-vagrant`
+1. `git clone -b omp-master https://github.com/pkp/vagrant.git` (or download the .zip/.tar version)
+2. `cd vagrant`
 3. `vagrant up`
 
 When all the scripts have finished running, your virtual machine is ready for use.
 
-## Accessing OJS
+## Accessing OMP
 
-Point your browser at [http://localhost:8000/ojs](http://localhost:8000/ojs). The [OJS Documentation wiki](https://pkp.sfu.ca/wiki/index.php?title=OJS_Documentation) contains everything you need to know, except...
+Point your browser at [http://localhost:8000/omp](http://localhost:8000/omp). The [OMP Documentation wiki](https://pkp.sfu.ca/wiki/index.php?title=OMP_Documentation) contains everything you need to know, except...
 * The administrator account has username: admin password: admin
 
 ## Other details you might find useful
@@ -34,22 +34,12 @@ You won't normally need the following but just in case:
 
 MySQL credentials:
   - username: root
-  - password: ojs
+  - password: omp
 
-OJS database details:
-  - database: ojs
-  - user: ojs
-  - password: ojs
-
-## Environment
-
-The virtual machine runs:
-
-- Ubuntu 14.04
-- MySQL 5.5.41
-- Apache 2.26
-- PHP 5.5.9 
-- OJS master branch (3.x)
+OMP database details:
+  - database: omp
+  - user: omp
+  - password: omp
 
 ## Thanks
 
