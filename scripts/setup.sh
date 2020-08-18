@@ -6,7 +6,7 @@ apt-get -y update
 apt-get -y install openssh-server git vim wget curl dialog apt-utils unzip
 
 # Install LAMP server
-apt-get -y install php7.4 php7.4-gd php7.4-xsl php7.4-curl php-mysqli mysql-server
+apt-get -y install php7.4 php7.4-gd php7.4-xsl php7.4-curl php-mbstring php-mysqli mysql-server
 
 debconf-set-selections <<< 'mysql-server mysql-server/root_password password ojs'
 debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password ojs'
