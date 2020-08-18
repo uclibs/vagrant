@@ -1,16 +1,9 @@
 echo "Installing OJS"
 cd ~
-
-# Set up the OJS database
-echo "CREATE DATABASE ojs DEFAULT CHARSET utf8" | mysql -uroot -pojs
-echo "CREATE USER 'ojs'@'localhost' IDENTIFIED BY 'ojs'" | mysql -uroot -pojs
-echo "GRANT ALL ON ojs.* TO 'ojs'@'localhost'" | mysql -uroot -pojs
-echo "FLUSH PRIVILEGES" | mysql -uroot -pojs
-
 cd www
 
 # Clone the OJS repository
-git clone https://git.uc.edu/UCLIBS/ojs3 .
+git clone -b qa --single-branch https://github.com/UCLIBS/ojs3 .
 mkdir ~/files
 chgrp -R www-data cache public ~/files config.inc.php
 chmod -R ug+w cache public ~/files config.inc.php
